@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPI</title>
+    <style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .bg {
+        /*background-image: url(''); Replace with your image path */
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        justify-content: center;
+        background-size: cover;
+        position: relative;
+        color: white;
+        text-align: center; 
+    }
+    .nav {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: flex-end;
+        background: rgba(0, 0, 0, 0.5); /* Optional for nav bar background */
+    }
+    .nav a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+    }
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .about-bg {
+        background-image: url('img8.jpeg'); /* Replace with your image path */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 60px 0;
+    }
+    .predict-bg {
+        background-image: url('img8.jpeg'); /* Replace with your image path */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 60px 0;
+        text-align: center;
+    }
+    .about-content {
+        background: white;
+        color: black;
+        text-align: center;
+        padding: 40px;
+        max-width: 800px;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .about-content h2 {
+        color: #ff3366; /* Color for 'About Us' text */
+    }
+    .tag {
+        display: inline-block;
+        background-color: #ff3366; /* Background color for the 'ABOUT' tag */
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    </style>
+</head>
+<body background="data:image/jpeg;base64,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" style="background-repeat: no-repeat; background-size: cover;">
+    <div class="bg">
+      <div class="nav">
+        <a href="/">Home</a>
+        <a href="#about">About</a>
+        <a href="/predict">predict</a>
+      </div>
+      <div class="content">
+        <h1>Welcome to Consumer Price prediction</h1>
+        <h2>The Project aims to develop a predictive model for forecasting the Consumer Price Index (CPI)</h2>
+        <a href="#about" class="button">GET START</a>
+      </div>
+    </div>
+    <div id="about" class="about-bg">
+        <div class="about-content">
+          <div class="tag">About</div>
+          <p>
+            <b><h1>What Is the Consumer Price Index (CPI)?</h1></b>
+             <b><p>The Consumer Price Index (CPI) measures the monthly change in prices paid by U.S. consumers. The Bureau of Labor Statistics (BLS) calculates the CPI as a weighted average of prices for a basket of goods and services representative of aggregate U.S. consumer spending.
+                The CPI is one of the most popular measures of inflation and deflation. The CPI report uses a different survey methodology, price samples, and index weights than the producer price index (PPI), which measures changes in the prices received by U.S. producers of goods and services.
+                The consumer price index (CPI) is the instrument to measure inflation. It is used to estimate the average variation between two given periods in the prices of products consumed by households. It is a composite measurement of trends in the prices of products, at constant quality.
+            </b></p>
+             <a href="/predict" class="button">predict</a>
+          </p>
+        </div>
+    </div>
+</body>
+</html>

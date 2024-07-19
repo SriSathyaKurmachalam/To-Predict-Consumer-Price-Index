@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Data</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Add your styles here -->
+    <style>
+       body, html {
+        height: 25%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+        .bg {
+        /*background-image: url(''); Replace with your image path */
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        justify-content: center;
+        background-size: cover;
+        position: relative;
+        color: white;
+        text-align: center; 
+       }
+       .nav {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: flex-end;
+        background: rgba(0, 0, 0, 0.5); /* Optional for nav bar background */
+       }
+      .nav a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+       }
+    </style>
+</head>
+<body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo7XIbZDMmmoIv2IbO-RWFPLcdsyno2lulLdw5DwRPAKrNbXuyDO2zqsbEMNNKCY6YTjY&usqp=CAU"; style="background-repeat: no-repeat; background-size: cover;">
+    <div class="bg">
+     <div class="nav">
+        <a href="/">Home</a>
+        <a href="#home">About</a>
+        <a href="#predict" class="active">Predict</a>
+     </div>
+    </div>
+    <header align="center">
+        <h1>Submit Data for CPI Prediction</h1>
+    </header>
+    <main>
+       <div align="center">
+        <b><form action="/submit" method="POST">
+            <label for="1">Sector</label>
+            <input type="text" id="1" name="1" required><br>
+            <label for="2">Year</label>
+            <input type="text" id="2" name="2" required><br>
+            <label for="3">Month</label>
+            <input type="text" id="3" name="3" required><br>
+            <label for="4">Cereals and products</label>
+            <input type="text" id="4" name="4" required><br>
+            <label for="5">Meat and fish</label>
+            <input type="text" id="5" name="5" required><br>
+            <label for="6">Egg</label>
+            <input type="text" id="6" name="6" required><br>
+            <label for="7">Milk and products</label>
+            <input type="text" id="7" name="7" required><br>
+            <label for="8">Oils and fats</label>
+            <input type="text" id="8" name="8" required><br>
+            <label for="9">Fruits</label>
+            <input type="text" id="9" name="9" required><br>
+            <label for="10">Vegetables</label>
+            <input type="text" id="10" name="10" required><br>
+            <label for="11">Pulses and products</label>
+            <input type="text" id="11" name="11" required><br>
+            <label for="12">Sugar and Confectionery</label>
+            <input type="text" id="12" name="12" required><br>
+            <label for="13">Spices</label>
+            <input type="text" id="13" name="13" required><br>
+            <label for="14">Non-alcoholic beverages</label>
+            <input type="text" id="14" name="14" required><br>
+            <label for="15">Prepared meals, snacks, sweets etc.</label>
+            <input type="text" id="15" name="15" required><br>
+            <label for="16">Food and beverages</label>
+            <input type="text" id="16" name="16" required><br>
+            <label for="17">Pan, tobacco and intoxicants</label>
+            <input type="text" id="17" name="17" required><br>
+            <label for="18">Clothing</label>
+            <input type="text" id="18" name="18" required><br>
+            <label for="19">Footwear</label>
+            <input type="text" id="19" name="19" required><br>
+            <!-- Add more data points as needed -->
+            <button type="submit">Submit</button>
+        </b></form>
+       </div>
+    </main>
+    <footer align="center">
+        <b><p>&copy; 2024 CPI Prediction Tool. All rights reserved.</p></b>
+    </footer>
+</body>
+</html>
